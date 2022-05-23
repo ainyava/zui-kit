@@ -1,0 +1,31 @@
+$sizes: (
+  "xs": 0.3rem,
+  "sm": 1rem,
+  "md": 1.2rem,
+  "lg": 1.4rem,
+  "xl": 1.6rem,
+  "2xl": 1.8rem,
+  "3xl": 2rem,
+);
+
+$dirs: ("left", "right", "top", "bottom");
+
+@each $name, $size in $sizes {
+  .padding-#{$name} {
+    padding: $size;
+  }
+  .margin-#{$name} {
+    margin: $size;
+  }
+  .radius-#{$name} {
+    border-radius: $size - 0.7rem;
+  }
+  @each $dir in $dirs {
+    .padding-#{$dir}-#{$name} {
+      padding-#{$dir}: $size;
+    }
+    .margin-#{$dir}-#{$name} {
+      margin-#{$dir}: $size;
+    }
+  }
+}

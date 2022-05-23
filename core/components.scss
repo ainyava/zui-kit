@@ -1,0 +1,12 @@
+@import "./spacing.scss";
+@import "./colors.scss";
+
+.btn {
+  padding: #{map-get($sizes, "sm")};
+  border-radius: #{map-get($sizes, "md")};
+  color: #{map-get($colors, "white")};
+  border: none;
+}
+
+.textbox {
+}
